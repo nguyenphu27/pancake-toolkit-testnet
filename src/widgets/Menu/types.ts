@@ -4,7 +4,6 @@ import { Login } from "../WalletModal/types";
 export interface Language {
   code: string;
   language: string;
-  locale: string;
 }
 
 export interface Profile {

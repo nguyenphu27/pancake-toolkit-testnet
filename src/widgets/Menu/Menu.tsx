@@ -125,28 +125,13 @@ const Menu: React.FC<NavProps> = ({
         {!!login && !!logout && (
           <Flex>
             <UserBlock account={account} login={login} logout={logout} />
-            {profile && <Avatar profile={profile} />}
           </Flex>
         )}
       </StyledNav>
       <BodyWrapper>
-        <Panel
-          isPushed={isPushed}
-          isMobile={isMobile}
-          showMenu={showMenu}
-          isDark={isDark}
-          toggleTheme={toggleTheme}
-          langs={langs}
-          setLang={setLang}
-          currentLang={currentLang}
-          cakePriceUsd={cakePriceUsd}
-          pushNav={setIsPushed}
-          links={links}
-        />
-        <Inner isPushed={isPushed} showMenu={showMenu}>
+        <Inner isPushed={true} showMenu={showMenu}>
           {children}
         </Inner>
-        <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
       </BodyWrapper>
     </Wrapper>
   );
